@@ -1,3 +1,5 @@
+import 'package:payroll/approvingmanagers/approvingmanagers_widget.dart';
+import 'package:payroll/index.dart';
 import '../flutter_flow/flutter_flow_drop_down.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -13,11 +15,15 @@ class EmployerAppbar extends StatelessWidget with PreferredSizeWidget{
     return AppBar(
         backgroundColor: Color(0xFFF5F5F5),
         automaticallyImplyLeading: false,
-        title: Image.asset(
-          'assets/images/2uovo_P.png',
-          width: 50,
-          height: 50,
-          fit: BoxFit.cover,
+        title: InkWell(
+          onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const EmployerdashboardWidget()),);},
+          splashColor: Colors.white54,
+          child: Ink.image(
+            image: AssetImage('assets/images/2uovo_P.png'),
+            width: 50,
+            height: 50,
+            fit: BoxFit.cover,
+          ),
         ),
         actions: [],
         centerTitle: false,
@@ -66,13 +72,15 @@ class EmployerDrawer extends StatelessWidget {
               children: [
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                  child: Text(
-                    'Approving Managers',
-                    style: FlutterFlowTheme.of(context).bodyText1.override(
-                          fontFamily: 'Poppins',
-                          fontSize: 18,
-                        ),
-                  ),
+                  child: TextButton(
+                      child: Text('Approving Managers'),
+                      style: TextButton.styleFrom(
+                      padding: const EdgeInsets.all(16.0),
+                      textStyle: const TextStyle(fontSize: 20,color:Colors.black12),),
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const ApprovingmanagersWidget()),);
+                      },
+                    ),
                 ),
               ],
             ),
@@ -82,13 +90,15 @@ class EmployerDrawer extends StatelessWidget {
               children: [
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                  child: Text(
-                    'Employees',
-                    style: FlutterFlowTheme.of(context).bodyText1.override(
-                          fontFamily: 'Poppins',
-                          fontSize: 18,
-                        ),
-                  ),
+                  child: TextButton(
+                      child: Text('Employees'),
+                      style: TextButton.styleFrom(
+                      padding: const EdgeInsets.all(16.0),
+                      textStyle: const TextStyle(fontSize: 20,color:Colors.black12),),
+                      onPressed: () {
+                        //Navigator.push(context, MaterialPageRoute(builder: (context) => const ManageemployeesWidget()),);
+                      },
+                    ),
                 ),
               ],
             ),
@@ -98,13 +108,15 @@ class EmployerDrawer extends StatelessWidget {
               children: [
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                  child: Text(
-                    'Transactions',
-                    style: FlutterFlowTheme.of(context).bodyText1.override(
-                          fontFamily: 'Poppins',
-                          fontSize: 18,
-                        ),
-                  ),
+                  child: TextButton(
+                      child: Text('Transactions'),
+                      style: TextButton.styleFrom(
+                      padding: const EdgeInsets.all(16.0),
+                      textStyle: const TextStyle(fontSize: 20,color:Colors.black12),),
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const TransactionsWidget()),);
+                      },
+                    ),
                 ),
               ],
             ),
@@ -114,13 +126,15 @@ class EmployerDrawer extends StatelessWidget {
               children: [
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                  child: Text(
-                    'Project Codes',
-                    style: FlutterFlowTheme.of(context).bodyText1.override(
-                          fontFamily: 'Poppins',
-                          fontSize: 18,
-                        ),
-                  ),
+                  child: TextButton(
+                      child: Text('Project Codes'),
+                      style: TextButton.styleFrom(
+                      padding: const EdgeInsets.all(16.0),
+                      textStyle: const TextStyle(fontSize: 20,color:Colors.black12),),
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const ProjectcodesWidget()),);
+                      },
+                    ),
                 ),
               ],
             ),
@@ -130,13 +144,15 @@ class EmployerDrawer extends StatelessWidget {
               children: [
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                  child: Text(
-                    'Business Details',
-                    style: FlutterFlowTheme.of(context).bodyText1.override(
-                          fontFamily: 'Poppins',
-                          fontSize: 18,
-                        ),
-                  ),
+                  child: TextButton(
+                      child: Text('Business Details'),
+                      style: TextButton.styleFrom(
+                      padding: const EdgeInsets.all(16.0),
+                      textStyle: const TextStyle(fontSize: 20,color:Colors.black12),),
+                      onPressed: () {
+                        //Navigator.push(context, MaterialPageRoute(builder: (context) => const BusinessdetailseditWidget()),);
+                      },
+                    ),
                 ),
               ],
             ),
