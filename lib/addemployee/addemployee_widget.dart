@@ -6,18 +6,19 @@ import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class AddapprovingmanagerWidget extends StatefulWidget {
-  const AddapprovingmanagerWidget({Key key}) : super(key: key);
+class AddemployeeWidget extends StatefulWidget {
+  const AddemployeeWidget({Key key}) : super(key: key);
 
   @override
-  _AddapprovingmanagerWidgetState createState() =>
-      _AddapprovingmanagerWidgetState();
+  _AddemployeeWidgetState createState() => _AddemployeeWidgetState();
 }
 
-class _AddapprovingmanagerWidgetState extends State<AddapprovingmanagerWidget> {
+class _AddemployeeWidgetState extends State<AddemployeeWidget> {
   String dropDownValue;
   TextEditingController textController1;
   TextEditingController textController2;
+  TextEditingController textController3;
+  TextEditingController textController4;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -25,6 +26,8 @@ class _AddapprovingmanagerWidgetState extends State<AddapprovingmanagerWidget> {
     super.initState();
     textController1 = TextEditingController();
     textController2 = TextEditingController();
+    textController3 = TextEditingController();
+    textController4 = TextEditingController();
   }
 
   @override
@@ -176,54 +179,7 @@ class _AddapprovingmanagerWidgetState extends State<AddapprovingmanagerWidget> {
                           autofocus: true,
                           obscureText: false,
                           decoration: InputDecoration(
-                            labelText: 'Name',
-                            enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1,
-                              ),
-                              borderRadius: const BorderRadius.only(
-                                topLeft: Radius.circular(4.0),
-                                topRight: Radius.circular(4.0),
-                              ),
-                            ),
-                            focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Color(0x00000000),
-                                width: 1,
-                              ),
-                              borderRadius: const BorderRadius.only(
-                                topLeft: Radius.circular(4.0),
-                                topRight: Radius.circular(4.0),
-                              ),
-                            ),
-                          ),
-                          style: FlutterFlowTheme.of(context).bodyText1,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Expanded(
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                        child: TextFormField(
-                          controller: textController2,
-                          onChanged: (_) => EasyDebounce.debounce(
-                            'textController2',
-                            Duration(milliseconds: 2000),
-                            () => setState(() {}),
-                          ),
-                          autofocus: true,
-                          obscureText: false,
-                          decoration: InputDecoration(
-                            labelText: 'Email',
+                            labelText: 'First Name',
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
                                 color: Color(0x00000000),
@@ -255,9 +211,104 @@ class _AddapprovingmanagerWidgetState extends State<AddapprovingmanagerWidget> {
               Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                      child: TextFormField(
+                        controller: textController2,
+                        onChanged: (_) => EasyDebounce.debounce(
+                          'textController2',
+                          Duration(milliseconds: 2000),
+                          () => setState(() {}),
+                        ),
+                        autofocus: true,
+                        obscureText: false,
+                        decoration: InputDecoration(
+                          labelText: 'Last Name',
+                          enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color(0x00000000),
+                              width: 1,
+                            ),
+                            borderRadius: const BorderRadius.only(
+                              topLeft: Radius.circular(4.0),
+                              topRight: Radius.circular(4.0),
+                            ),
+                          ),
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color(0x00000000),
+                              width: 1,
+                            ),
+                            borderRadius: const BorderRadius.only(
+                              topLeft: Radius.circular(4.0),
+                              topRight: Radius.circular(4.0),
+                            ),
+                          ),
+                        ),
+                        style: FlutterFlowTheme.of(context).bodyText1,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                      child: TextFormField(
+                        controller: textController3,
+                        onChanged: (_) => EasyDebounce.debounce(
+                          'textController3',
+                          Duration(milliseconds: 2000),
+                          () => setState(() {}),
+                        ),
+                        autofocus: true,
+                        obscureText: false,
+                        decoration: InputDecoration(
+                          labelText: 'Job Title',
+                          enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color(0x00000000),
+                              width: 1,
+                            ),
+                            borderRadius: const BorderRadius.only(
+                              topLeft: Radius.circular(4.0),
+                              topRight: Radius.circular(4.0),
+                            ),
+                          ),
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color(0x00000000),
+                              width: 1,
+                            ),
+                            borderRadius: const BorderRadius.only(
+                              topLeft: Radius.circular(4.0),
+                              topRight: Radius.circular(4.0),
+                            ),
+                          ),
+                        ),
+                        style: FlutterFlowTheme.of(context).bodyText1,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                    child: Text(
+                      'Type: ',
+                      style: FlutterFlowTheme.of(context).bodyText1,
+                    ),
+                  ),
                   FlutterFlowDropDown(
-                    initialOption: dropDownValue ??= 'Active',
-                    options: ['Active', 'Paused', 'Terminated'].toList(),
+                    initialOption: dropDownValue ??= 'Hourly',
+                    options: ['Hourly', 'Salary'].toList(),
                     onChanged: (val) => setState(() => dropDownValue = val),
                     width: 180,
                     height: 50,
@@ -275,6 +326,50 @@ class _AddapprovingmanagerWidgetState extends State<AddapprovingmanagerWidget> {
                   ),
                 ],
               ),
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                      child: TextFormField(
+                        controller: textController4,
+                        onChanged: (_) => EasyDebounce.debounce(
+                          'textController4',
+                          Duration(milliseconds: 2000),
+                          () => setState(() {}),
+                        ),
+                        autofocus: true,
+                        obscureText: false,
+                        decoration: InputDecoration(
+                          labelText: 'Email Address',
+                          enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color(0x00000000),
+                              width: 1,
+                            ),
+                            borderRadius: const BorderRadius.only(
+                              topLeft: Radius.circular(4.0),
+                              topRight: Radius.circular(4.0),
+                            ),
+                          ),
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                              color: Color(0x00000000),
+                              width: 1,
+                            ),
+                            borderRadius: const BorderRadius.only(
+                              topLeft: Radius.circular(4.0),
+                              topRight: Radius.circular(4.0),
+                            ),
+                          ),
+                        ),
+                        style: FlutterFlowTheme.of(context).bodyText1,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
                 child: Row(
@@ -284,9 +379,9 @@ class _AddapprovingmanagerWidgetState extends State<AddapprovingmanagerWidget> {
                       onPressed: () {
                         print('Button pressed ...');
                       },
-                      text: 'Add Approving Manager',
+                      text: 'Add Employee',
                       options: FFButtonOptions(
-                        width: 220,
+                        width: 180,
                         height: 40,
                         color: FlutterFlowTheme.of(context).primaryColor,
                         textStyle:

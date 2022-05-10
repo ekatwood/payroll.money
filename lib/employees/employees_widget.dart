@@ -5,15 +5,14 @@ import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ApprovingmanagersWidget extends StatefulWidget {
-  const ApprovingmanagersWidget({Key key}) : super(key: key);
+class EmployeesWidget extends StatefulWidget {
+  const EmployeesWidget({Key key}) : super(key: key);
 
   @override
-  _ApprovingmanagersWidgetState createState() =>
-      _ApprovingmanagersWidgetState();
+  _EmployeesWidgetState createState() => _EmployeesWidgetState();
 }
 
-class _ApprovingmanagersWidgetState extends State<ApprovingmanagersWidget> {
+class _EmployeesWidgetState extends State<EmployeesWidget> {
   String dropDownValue;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -229,63 +228,29 @@ class _ApprovingmanagersWidgetState extends State<ApprovingmanagersWidget> {
                       margin: EdgeInsetsDirectional.fromSTEB(12, 4, 12, 4),
                       hidesUnderline: true,
                     ),
+                    FFButtonWidget(
+                      onPressed: () {
+                        print('Button pressed ...');
+                      },
+                      text: 'Manage',
+                      options: FFButtonOptions(
+                        width: 130,
+                        height: 40,
+                        color: FlutterFlowTheme.of(context).primaryColor,
+                        textStyle:
+                            FlutterFlowTheme.of(context).subtitle2.override(
+                                  fontFamily: 'Poppins',
+                                  color: Colors.white,
+                                ),
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                          width: 1,
+                        ),
+                        borderRadius: 12,
+                      ),
+                    ),
                   ],
                 ),
-              ),
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                    child: Text(
-                      'Employees:',
-                      style: FlutterFlowTheme.of(context).bodyText1,
-                    ),
-                  ),
-                  Expanded(
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(3, 0, 0, 0),
-                          child: Container(
-                            height: 40,
-                            decoration: BoxDecoration(
-                              color: Color(0xFFEEEEEE),
-                            ),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      3, 0, 0, 0),
-                                  child: Text(
-                                    '7, Joe Sample',
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyText1,
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.close,
-                                  color: Colors.black,
-                                  size: 24,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(3, 0, 0, 0),
-                          child: Icon(
-                            Icons.add_circle,
-                            color: Colors.black,
-                            size: 24,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
               ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),
@@ -296,9 +261,9 @@ class _ApprovingmanagersWidgetState extends State<ApprovingmanagersWidget> {
                       onPressed: () {
                         print('Button pressed ...');
                       },
-                      text: 'Add Approving Manager',
+                      text: 'Add Employee',
                       options: FFButtonOptions(
-                        width: 130,
+                        width: 150,
                         height: 40,
                         color: FlutterFlowTheme.of(context).primaryColor,
                         textStyle:

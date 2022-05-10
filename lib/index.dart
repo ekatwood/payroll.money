@@ -12,3 +12,5 @@ export 'addapprovingmanager/addapprovingmanager_widget.dart'
     show AddapprovingmanagerWidget;
 export 'transactions/transactions_widget.dart' show TransactionsWidget;
 export 'projectcodes/projectcodes_widget.dart' show ProjectcodesWidget;
+export 'employees/employees_widget.dart' show EmployeesWidget;
+export 'addemployee/addemployee_widget.dart' show AddemployeeWidget;

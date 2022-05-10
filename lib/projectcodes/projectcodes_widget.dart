@@ -228,6 +228,27 @@ class _ProjectcodesWidgetState extends State<ProjectcodesWidget> {
                       margin: EdgeInsetsDirectional.fromSTEB(12, 4, 12, 4),
                       hidesUnderline: true,
                     ),
+                    FFButtonWidget(
+                      onPressed: () {
+                        print('Button pressed ...');
+                      },
+                      text: 'Manage',
+                      options: FFButtonOptions(
+                        width: 130,
+                        height: 40,
+                        color: FlutterFlowTheme.of(context).primaryColor,
+                        textStyle:
+                            FlutterFlowTheme.of(context).subtitle2.override(
+                                  fontFamily: 'Poppins',
+                                  color: Colors.white,
+                                ),
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                          width: 1,
+                        ),
+                        borderRadius: 12,
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -259,7 +280,7 @@ class _ProjectcodesWidgetState extends State<ProjectcodesWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       3, 0, 0, 0),
                                   child: Text(
-                                    'EmployeeName',
+                                    '7, Joe Sample',
                                     style:
                                         FlutterFlowTheme.of(context).bodyText1,
                                   ),
@@ -297,7 +318,7 @@ class _ProjectcodesWidgetState extends State<ProjectcodesWidget> {
                       },
                       text: 'Add Approving Manager',
                       options: FFButtonOptions(
-                        width: 130,
+                        width: 220,
                         height: 40,
                         color: FlutterFlowTheme.of(context).primaryColor,
                         textStyle:
