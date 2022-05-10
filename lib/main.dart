@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:payroll/sql_functions/helper_functions.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/internationalization.dart';
@@ -12,27 +13,12 @@ void main() async {
 
   await FlutterFlowTheme.initialize();
 
-  final client = SupabaseClient('https://iornghtidhexrbbvoanf.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlvcm5naHRpZGhleHJiYnZvYW5mIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NTE2MjIzNzAsImV4cCI6MTk2NzE5ODM3MH0.a2Gyhz4KqHy8jXK3MDmgs7dP0ubkh7LBfn4oqKA2CkM');
-  
-  // Select from table `countries` ordering by `name`
-  final response = await client
-      .from('employer')
-      .select()
-      .execute();
+  String d = new DateTime(2022,5,19,0,0,0).toString();
 
-  var walletAddress = 'terra123456789';
-  var payPeriodStart = new DateTime(2022,5,19,0,0,0);
+  var t = await instantiate_business(walletAddress: 'terra123456',businessName: 'hello world', 
+  businessEmail: 'asdf@gmail.com', payPeriodStart: d,payPeriodLength: 14);
   
-  var payPeriodLength = 14;
-
-  final res = await client
-  .rpc('instantiate_business', params: { 'walletaddress': walletAddress, 'businessname': 'asdf','businessemail':'sadf','payperiodstart':payPeriodStart.toString(),
-    'payperiodlength': payPeriodLength })
-  .execute();
-  
-  print('hello world');
-  print(res.toJson());
-  
+  print(t);
   runApp(MyApp());
 }
 
