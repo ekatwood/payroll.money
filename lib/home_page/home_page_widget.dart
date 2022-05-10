@@ -1,6 +1,7 @@
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import '../employerdashboard/employerdashboard_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -32,7 +33,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
             padding: EdgeInsetsDirectional.fromSTEB(0, 0, 3, 3),
             child: FFButtonWidget(
               onPressed: () {
-                print('Button pressed ...');
+                Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => const EmployerdashboardWidget()),
+                              );
               },
               text: 'Connect Wallet',
               options: FFButtonOptions(
