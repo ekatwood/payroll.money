@@ -15,10 +15,10 @@ void main() async {
 
   String d = new DateTime(2022,5,19,0,0,0).toString();
 
-  var t = await instantiate_business(walletAddress: 'terra123456',businessName: 'hello world', 
-  businessEmail: 'asdf@gmail.com', payPeriodStart: d,payPeriodLength: 14);
+  //var t = await instantiate_business(walletAddress: 'terra123456',businessName: 'hello world', 
+  //businessEmail: 'asdf@gmail.com', payPeriodStart: d,payPeriodLength: 14);
   
-  print(t);
+  //print(t);
   runApp(MyApp());
 }
 

@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:supabase/supabase.dart';
 
 final client = SupabaseClient('https://iornghtidhexrbbvoanf.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlvcm5naHRpZGhleHJiYnZvYW5mIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NTE2MjIzNzAsImV4cCI6MTk2NzE5ODM3MH0.a2Gyhz4KqHy8jXK3MDmgs7dP0ubkh7LBfn4oqKA2CkM');
