@@ -1,5 +1,6 @@
 import 'package:payroll/approvingmanagers/approvingmanagers_widget.dart';
 import 'package:payroll/index.dart';
+import '../employees/employees.dart';
 import '../flutter_flow/flutter_flow_drop_down.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -15,6 +16,7 @@ class EmployerAppbar extends StatelessWidget with PreferredSizeWidget{
     return AppBar(
         backgroundColor: Color(0xFFF5F5F5),
         automaticallyImplyLeading: false,
+        iconTheme: IconThemeData(color: Color.fromARGB(255, 4, 81, 144)),
         title: InkWell(
           onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const EmployerdashboardWidget()),);},
           splashColor: Colors.white54,
@@ -42,6 +44,7 @@ class EmployerDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
         elevation: 16,
+        
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
@@ -96,7 +99,7 @@ class EmployerDrawer extends StatelessWidget {
                       padding: const EdgeInsets.all(16.0),
                       textStyle: const TextStyle(fontSize: 20,color:Colors.black12),),
                       onPressed: () {
-                        //Navigator.push(context, MaterialPageRoute(builder: (context) => const ManageemployeesWidget()),);
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const EmployeesWidget()),);
                       },
                     ),
                 ),

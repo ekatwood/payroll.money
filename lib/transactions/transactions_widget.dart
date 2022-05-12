@@ -4,6 +4,7 @@ import '../flutter_flow/flutter_flow_widgets.dart';
 import '../appbars/employer_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../tables/tables.dart';
 
 class TransactionsWidget extends StatefulWidget {
   const TransactionsWidget({Key key}) : super(key: key);
@@ -14,6 +15,12 @@ class TransactionsWidget extends StatefulWidget {
 
 class _TransactionsWidgetState extends State<TransactionsWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  final List<Map<String, String>> listOfColumns = [ 
+    {"Day": "05/19/22", "Total": "\$14,000"},
+    {"Day": "05/31/22", "Total": "\$12,040"},
+    {"Day": "06/10/22", "Total": "\$13,301"},
+    {"Day": "06/19/22", "Total": "\$13,342"}];
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +36,7 @@ class _TransactionsWidgetState extends State<TransactionsWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(10, 10, 0, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -59,47 +66,7 @@ class _TransactionsWidgetState extends State<TransactionsWidget> {
               ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                      child: Text(
-                        'Day',
-                        style: FlutterFlowTheme.of(context).bodyText1,
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                      child: Text(
-                        'Amount Sent',
-                        style: FlutterFlowTheme.of(context).bodyText1,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                      child: Text(
-                        'Get Day',
-                        style: FlutterFlowTheme.of(context).bodyText1,
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                      child: Text(
-                        'get amount',
-                        style: FlutterFlowTheme.of(context).bodyText1,
-                      ),
-                    ),
-                  ],
-                ),
+                child: TransactionsTable(listOfColumns),
               ),
             ],
           ),
